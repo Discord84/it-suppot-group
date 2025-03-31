@@ -217,6 +217,7 @@ header {
 
 .active {
     border-left: 2px solid blue;
+    color: blue;
 }
 
 .choose-button-container {
@@ -296,6 +297,28 @@ header {
 .work-button:hover {
     background: rgb(243,255,104);
     background: radial-gradient(circle, rgba(243,255,104,1) 0%, rgba(255,163,0,1) 100%);
+}
+
+.clicker-container {
+    position: relative;
+    display: flex;
+    width: fit-content;
+}
+
+.click-number {
+    position: absolute;
+    color: orange;
+    font-size: 40px;
+    pointer-events: none;
+    user-select: none;
+    animation: tap-tap-tap 0.5s ease-out forwards;
+}
+
+@keyframes tap-tap-tap {
+    0%{transform: translateY(0);
+    opacity: 1;}
+    100%{transform: translateY(-50px);
+    opacity: 0;}
 }
 
 .work-item {
