@@ -379,10 +379,13 @@ header {
     border-top: 1px solid #2f353faf;
     position: relative;
     padding: 20px 10px;
+    color: black;
+    font-size: 26px;
 }
 
 .cirle-active {
     border-top: 1px solid #2E2BD0;
+
 }
 
 .technologies-circle::before {
@@ -435,13 +438,17 @@ header {
     color: orangered;
 }
 
-.techologies-active {
-    color: black;
-    font-size: 26px;
+.technologies-p {
+    display: none;
+}
+
+.pactive {
+    display: block;
 }
 
 .technologies-full-section {
     display: flex;
+    
 }
 
 .technologies-no-full-section {
@@ -830,4 +837,86 @@ footer {
     top: 2px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+@media (max-width:768px){
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .header-no-main {
+        /* display: none; */
+    }
+    .header-h1::before {
+        height: 80%;
+        width: 80%;
+    }
+    .h1 {
+        font-size: 120px;
+    }
+    .header-beautyfile {
+        order: 1;
+    }
+    .header-logo {
+        order: 2;
+    }
+    .header-button {
+        order: 3;
+        border: none;
+        padding-left: 0;
+    }
+    .need-to-hide-you{
+        display: none;
+    }
+    .header-contact {
+        padding: 0;
+        height: 80px;
+        width: 80px;
+        background-color: white;
+    }
+    .header-contact::before {
+        height: 60px;
+        width: 60px;
+        left: 50%;
+        right: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: url(images/send.png) center/cover no-repeat;
+    }
+    .technologies-full-section {
+        flex-direction: column;
+    }
+    .footer-bottom::after {
+        width: 100%;
+    }
+    .goals-block {
+        width: 100%;
+    }
+    .goals-block-long {
+        width: 100%;
+    }
+    .goals-block-medium {
+        width: 100%;
+    }
+    .goals-block1 {
+        flex-direction: column;
+    }
+    .goals-block2 {
+        flex-direction: column;
+    }
+    .goals-block3 {
+        flex-direction: column;
+    }
+    .goals-block-img1 {
+        height: 715px;
+        width: 100%;
+    }
+    .goals-block-img2 {
+        height: 715px;
+        width: 100%;
+    }
+    .goals-block-img3 {
+        height: 715px;
+        width: 100%;
+    }
 }
