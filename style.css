@@ -278,6 +278,7 @@ header {
 .X {
     font-size: 60px;
     margin-bottom: 100px;
+    text-align: center;
 }
 
 .goals {
@@ -344,7 +345,7 @@ header {
     content: "";
     width: 100%;
     height: 100%;
-    background: url(images/plenka.png);
+    background: url(images/plenka.png) center/cover no-repeat;
     top: 0;
     left: 0;
 }
@@ -839,6 +840,10 @@ footer {
     transform: translateX(-50%);
 }
 
+.work-p {
+    color: #2f353Faf;
+}
+
 @media (max-width:768px){
     .container {
         padding-left: 20px;
@@ -852,7 +857,7 @@ footer {
         width: 80%;
     }
     .h1 {
-        font-size: 120px;
+        font-size: 100px;
     }
     .header-beautyfile {
         order: 1;
@@ -889,8 +894,14 @@ footer {
     .footer-bottom::after {
         width: 100%;
     }
+    .goals-h1 {
+        margin: 30px;
+        text-align: left;
+        margin-left: 0;
+    }
     .goals-block {
         width: 100%;
+        padding: 20px;
     }
     .goals-block-long {
         width: 100%;
@@ -918,5 +929,85 @@ footer {
     .goals-block-img3 {
         height: 715px;
         width: 100%;
+    }
+    .work-flex {
+        display: flex;
+        flex-direction: column;
+    }
+    .work-item {
+        width: 100%;
+        padding: 20px;
+    }
+    .work-h3 {
+        font-size: 34px;
+    }
+    .work-p {
+        font-size: 24px;
+    }
+    .why-choose-us {
+        font-size: 34px;
+    }
+    .fill-the-gaps {
+        font-size: 24px;
+    }
+    .choose-container {
+        flex-direction: column;
+    }
+    .choose-item {
+        width: 100%;
+    }
+    .technologies-no-full-section {
+        width: 100%;
+        margin-left: 0;
+        font-size: 24px;
+    }
+    .technologies-h2 {
+        font-size: 34px
+    }
+    .industriese-all {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .adaptive-bad {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 25px;
+        border: 1px solid #2f353F;
+        border-radius: 25px;
+        padding: 20px;
+    }
+    .industries-h3 {
+        font-size: 34px ;
+    }
+    .industries-p {
+        font-size: 24px;
+    }
+    .industries-img {
+        width: 100%;
+        max-width: 100px;
+    }
+    .big-parent-of-all-mega-super-divs-not-easy-and-not-base-in-very-big-verse-of-all-tiny-verse {
+        flex-direction: column;
+    }
+    .form-north {
+        width: 100%;
+    }
+    .form-south {
+        width: 100%;
+    }
+    .form-h2 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 550px){
+    .h1 {
+        font-size: 40px;
+    }
+    .work-item {
+        padding: 20px;
     }
 }
