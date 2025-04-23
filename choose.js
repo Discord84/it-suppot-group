@@ -49,12 +49,12 @@ forma.addEventListener("submit",async (e)=>{
     let describe = document.querySelector(".bobsuno").value
     let photo = document.querySelector(".input__file")
     let documento = document.querySelector(".input__file2")
-    console.log(fullName.length)
     if(fullName.length<3 || email.length<7 || phoneNumber.length<10 || describe.length<3){
         alert("Заполните обязательные поля *все")
         return
     }
     let allFiles = [...photo.files, ...documento.files]
+    console.log(allFiles)
     let invalidFiles = allFiles.filter(file => !file.type.match("image.*"))
     if (invalidFiles.length>0){
         alert("сюда только картинки")
@@ -68,7 +68,7 @@ forma.addEventListener("submit",async (e)=>{
     📞 Номер телефона:  ${phoneNumber} \n
     🌃 фотка: ${photo} \n
     🗓 описание: ${describe} \n
-    📜 Документ: ${documento}`
+    📜 Документ: ${allFiles.length}`
     try {
         let response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`,{
             method: "POST", 
@@ -87,7 +87,13 @@ forma.addEventListener("submit",async (e)=>{
             throw new Error("ээ нуу тут короче ошибка")
         }
         for (let file of allFiles){
-
+            let formData = new FormData()
+            formData.append("chat_id", chatId)
+            formData.append("document", file)
+            await fetch (`https://api.telegram.org/bot${botToken}/sendPhoto`,{
+                method: "POST",
+                body: formData
+            })
         }
         alert ("Все готово ваши сообщения отправлены в пентагон")
     } catch(error){
