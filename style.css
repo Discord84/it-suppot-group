@@ -1219,6 +1219,7 @@ footer {
         transition: 1s;
         top: 90px;
         left: -30px;
+        z-index: 5;
     }
     .goals {
         margin-top: 100px;
@@ -1256,6 +1257,12 @@ footer {
     .header-logo {
         height: 43px;
         width: 140px;
+    }
+    .why-choose-us {
+        margin-bottom: 50px;
+    }
+    .fill-the-gaps {
+        margin-bottom: 75px;
     }
 
 }
