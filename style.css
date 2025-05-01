@@ -1113,6 +1113,11 @@ footer {
     .big-parent-of-all-mega-super-divs-not-easy-and-not-base-in-very-big-verse-of-all-tiny-verse {
         flex-direction: column;
     }
+
+.technologies-no-full-section {
+    margin-top: 50px;
+}
+
     .form {
         border-radius: 0;
         padding-top: 60px;
@@ -1236,6 +1241,20 @@ footer {
     }
     footer {
         margin-top: 0;
+    }
+    .x {
+        font-size: 32px;
+    }
+    .work-h3 {
+        font-size: 24px;
+    }
+
+.technologies-h2 {
+    margin-top: 100px;
+}
+
+    .need-size {
+        font-size: 32px;
     }
     .header-link {
         margin-bottom: 7px;
